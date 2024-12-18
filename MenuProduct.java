@@ -11,30 +11,60 @@ public class MenuProduct extends Product {
         this.productList = productList;
     }
 
-    public double calculateExpense(){
+    public double calculateSellingPrice(){
 
-        double totalExpense = 0;
+        double totalPrice = 0;
 
         for( Product product : productList){
             
             if( product instanceof MainDish){
 
-                totalExpense += 9/10 * ((MainDish) product).calculateExpense();
+                totalPrice += 9/10 * product.getSellingPrice();
             }
 
             else if( product instanceof Dessert){
 
-                totalExpense += 8/10 * ((Dessert) product).calculateExpense();
+                totalPrice += 8/10 * product.getSellingPrice();
             }
 
             else if( product instanceof Beverage){
 
-                totalExpense += 5/10 * ((Beverage) product).calculateExpense();
+                totalPrice += 5/10 * product.getSellingPrice();
             }
 
             else{
 
-                System.out.println(" The menu contains an unsupported product type");
+                System.out.println(" The menu contains an unsupported product type to calculate its selling price");
+            }
+        }
+
+        return totalPrice;
+    }
+
+    public double calculateExpense(){
+
+        double totalExpense = 0;
+
+        for(Product product : productList){
+
+            if( product instanceof MainDish){
+
+                totalExpense += ((MainDish)product).calculateExpense();
+            }
+
+            else if( product instanceof Dessert){
+
+                totalExpense += ((Dessert)product).calculateExpense();
+            }
+
+            else if( product instanceof Beverage){
+
+                totalExpense += ((Beverage)product).calculateExpense();
+            }
+
+            else{
+
+                System.out.println(" The menu contains an unsupported product type to calculate its expense");
             }
         }
 
