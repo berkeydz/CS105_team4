@@ -105,7 +105,9 @@ public class Restaurant {
                 totalExpenses += waiter.calculateExpense();
 
             }
-
+            
+// To calculate the expenses for all of the ordered products, the code should iterate over the orders and sum up the purchasePrices and UtilityCosts
+// Like it is done for calculateRevenue() function.
             for (Product product : products) {
 
                 totalExpenses += product.getUtilityCost();
