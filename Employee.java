@@ -1,4 +1,5 @@
 public class Employee  {
+    // make this class abstract so it cannot be constructed directly an employee must be either a cook or a waiter.
     private static int id = 0;
     private String name;
 
