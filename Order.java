@@ -3,6 +3,7 @@ Public class Order(){
   Arraylist<Product>Orderlist=new Arraylist<>()
   // there should be a "}" here.
   
+  // the type of the parameter should be given here as "Product product".
   public void Addproduct(product){
     Orderlist.add(product);
   }
