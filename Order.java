@@ -4,7 +4,7 @@ public class Order(){
   //public should start with lower-case
 
   Arraylist<Product>Orderlist=new Arraylist<>()
-  // there should be a "}" here.
+  // there should be a "}" here.}
   
   // the type of the parameter should be given here as "Product product"
   public void Addproduct(product){
@@ -17,9 +17,7 @@ public class Order(){
   }
 
   // Can not understand the purpose of this function.
-  public void getlist(list){
-    return list.get(i);
-  }
+  
 
   // as this functions returns an ArrayList its return type should be ArrayList instead of void.
   public Arraylist<Product> getOrderedProducts(){
