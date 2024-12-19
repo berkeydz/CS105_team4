@@ -1,4 +1,4 @@
 public interface Expense{
-  double calculateExpense()
+  double calculateExpense();
   
 }
