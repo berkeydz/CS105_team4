@@ -16,7 +16,11 @@ Public class Order(){
     return Orderlist;
   }
   public double calculatetotalPrice(){
-    for(int i=0;Orderlist.size();i++){
+    int a=0;
+    for(int i=0;i<Orderlist.size();i++){
+      a+=(Orderlist.get(i)).getSellingPrice;
+    }
+      
       
 
     
