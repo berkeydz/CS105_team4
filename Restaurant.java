@@ -131,6 +131,7 @@ public class Restaurant {
                 for (Order order : ordersReceived) {
 
                     totalRevenue += order.calculatedTotalPrice();
+                    // it should be calculateTotalPrice
 
                 }
 

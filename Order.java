@@ -27,6 +27,8 @@ Public class Order(){
   }
   
   public double calculatetotalPrice(){
+    // calculateTotalPrice "t" of "total" should be capitalized.
+
     // We can name "a" as "totalPrice" for more readable code.
     int a=0;
     for(int i=0;i<Orderlist.size();i++){
