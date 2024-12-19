@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-Public class Order(){
+public class Order(){
   //there should not be () after the class name
   //public should start with lower-case
 
@@ -22,7 +22,7 @@ Public class Order(){
   }
 
   // as this functions returns an ArrayList its return type should be ArrayList instead of void.
-  public void getOrderedProducts(){
+  public Arraylist<Product> getOrderedProducts(){
     return Orderlist;
   }
   
@@ -30,9 +30,9 @@ Public class Order(){
     // calculateTotalPrice "t" of "total" should be capitalized.
 
     // We can name "a" as "totalPrice" for more readable code.
-    int a=0;
+    int totalprice=0;
     for(int i=0;i<Orderlist.size();i++){
-      a+=(Orderlist.get(i)).getSellingPrice;
+      totalprice+=(Orderlist.get(i)).getSellingPrice;
     }
       
       
