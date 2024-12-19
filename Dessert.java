@@ -9,5 +9,5 @@ public class Dessert extends Product {
 
         return super.getPurchasePrice() + super.getUtilityCost();
     }
-    int a  = 1;
+    
 }
