@@ -6,7 +6,7 @@ public class Employee  {
     public Employee(int id,String name){
         this.id= id;
         this.name = name ;
-        // to give every employee different ids, increment the id in this line ( this.id++;)
+        
     }
     public static int getId(){
         return id;
