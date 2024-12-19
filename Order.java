@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 Public class Order(){
+  //there should not be () after the class name
+  //public should start with lower-case
+
   Arraylist<Product>Orderlist=new Arraylist<>()
   // there should be a "}" here.
   
-  // the type of the parameter should be given here as "Product product".
+  // the type of the parameter should be given here as "Product product"
   public void Addproduct(product){
     Orderlist.add(product);
   }
