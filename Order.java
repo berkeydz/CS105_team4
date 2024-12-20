@@ -1,38 +1,33 @@
 import java.util.ArrayList;
-public class Order(){
-  //there should not be () after the class name
-  //public should start with lower-case
+public class Order{
 
-  Arraylist<Product>Orderlist=new Arraylist<>()
-  // there should be a "}" here.}
+  ArrayList<Product>Orderlist=new ArrayList<>();
   
-  // the type of the parameter should be given here as "Product product"
-  public void Addproduct(product){
+  public void Addproduct(Product product){
     Orderlist.add(product);
   }
   public void listOrder(){
     for (int i=0;i<Orderlist.size();i++){
-      System.out.println(Orderlist.get(i);
+      System.out.println(Orderlist.get(i));
     }
   }
 
-  // Can not understand the purpose of this function.
   
 
-  // as this functions returns an ArrayList its return type should be ArrayList instead of void.
-  public Arraylist<Product> getOrderedProducts(){
+  public ArrayList<Product> getOrderedProducts(){
     return Orderlist;
   }
   
-  public double calculatetotalPrice(){
-    // calculateTotalPrice "t" of "total" should be capitalized.
+  public double calculateTotalPrice(){
 
-    // We can name "a" as "totalPrice" for more readable code.
     int totalprice=0;
     for(int i=0;i<Orderlist.size();i++){
-      totalprice+=(Orderlist.get(i)).getSellingPrice;
-    }
-      
+      totalprice+=(Orderlist.get(i)).getSellingPrice();
+      }
+
+      return totalprice;
+    } 
+  }
       
 
     
