@@ -23,7 +23,7 @@ public class Waiter extends Employee{
             totalEarn += order.calculateTotalPrice() * 0.1;
             // instead of multiplying with 0.1 multiply with orderRate.
         }
-        return totalEarn;
+        return totalEarn; 
     }
 
     
