@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 public class Waiter extends Employee{
-    private double orderRate;
+    private double orderRate = 0.1;
     // Initialize orderRate as %10.
     private ArrayList<Order> ordersReceived;
 
-    public Waiter(int id,String name ){
-        super(id,name);
+    public Waiter(String name ){
+        super(name);
         this.ordersReceived = new ArrayList<>();
     }
 
@@ -17,10 +17,11 @@ public class Waiter extends Employee{
         return ordersReceived;
     }
 
+    
     public double calculateExpense(){
         double totalEarn = 0.0;
         for (Order order: ordersReceived){
-            totalEarn += order.calculateTotalPrice() * 0.1;
+            totalEarn += order.calculateTotalPrice() * this.orderRate;
             // instead of multiplying with 0.1 multiply with orderRate.
         }
         return totalEarn;

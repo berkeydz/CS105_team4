@@ -23,7 +23,7 @@ public class Restaurant {
         System.out.println("Employees:");
         for (Employee employee : employees) {
 
-            System.out.println("Employee ID: " + employee.getId() + " Name: " + employee.getName());
+            System.out.println("Employee ID: " + Employee.getId() + " Name: " + employee.getName());
 
             if (employee instanceof Cook) {
 
@@ -130,7 +130,7 @@ public class Restaurant {
                 ArrayList<Order> ordersReceived = waiter.getOrdersReceived();
                 for (Order order : ordersReceived) {
 
-                    totalRevenue += order.calculatedTotalPrice();
+                    totalRevenue += order.calculateTotalPrice();
                     // it should be calculateTotalPrice
 
                 }
