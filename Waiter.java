@@ -7,6 +7,7 @@ public class Waiter extends Employee{
 
     public Waiter(int id,String name ){
         super(id,name);
+        this.orderRate = 0.10;
         this.ordersReceived = new ArrayList<>();
     }
 
@@ -20,7 +21,7 @@ public class Waiter extends Employee{
     public double calculateExpense(){
         double totalEarn = 0.0;
         for (Order order: ordersReceived){
-            totalEarn += order.calculateTotalPrice() * 0.1;
+            totalEarn += order.calculateTotalPrice() * orderRate;
             // instead of multiplying with 0.1 multiply with orderRate.
         }
         return totalEarn; 
