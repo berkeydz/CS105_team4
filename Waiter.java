@@ -17,7 +17,8 @@ public class Waiter extends Employee{
         return ordersReceived;
     }
 
-    
+
+    @Override
     public double calculateExpense(){
         double totalEarn = 0.0;
         for (Order order: ordersReceived){
