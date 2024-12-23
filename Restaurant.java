@@ -104,19 +104,17 @@ public class Restaurant {
                 Waiter waiter = (Waiter) employee;
                 totalExpenses += waiter.calculateExpense();
 
+                ArrayList<Order> ordersReceived = waiter.getOrdersReceived();
+                for (Order order : ordersReceived) {
+
+                    totalExpenses += order.calculateTotalPrice();
+
+                }
             }
-            
-// To calculate the expenses for all of the ordered products, the code should iterate over the orders and sum up the purchasePrices and UtilityCosts
-// Like it is done for calculateRevenue() function.
-            for (Product product : products) {
-
-                totalExpenses += product.getUtilityCost();
-
-            }
-
         }
         return totalExpenses;
     }
+
 
     public double calculateRevenue() {
 
@@ -131,7 +129,6 @@ public class Restaurant {
                 for (Order order : ordersReceived) {
 
                     totalRevenue += order.calculateTotalPrice();
-                    // it should be calculateTotalPrice
 
                 }
 
@@ -141,6 +138,7 @@ public class Restaurant {
         return totalRevenue;
     }
 
+    
     public ArrayList<Product> getProducts() {
 
         return products;
