@@ -105,9 +105,15 @@ public class Restaurant {
                 totalExpenses += waiter.calculateExpense();
 
                 ArrayList<Order> ordersReceived = waiter.getOrdersReceived();
+
                 for (Order order : ordersReceived) {
 
-                    totalExpenses += order.calculateTotalPrice();
+                    ArrayList<Product> orderedProducts = order.getOrderedProducts();
+                    
+                    for(Product product : orderedProducts){
+
+                        totalExpenses += product.getPurchasePrice() + product.getUtilityCost();
+                    }
 
                 }
             }
