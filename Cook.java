@@ -15,6 +15,8 @@ public class Cook extends Employee{
     public double getTaxRate(){
         return taxRate;
     }
+
+    @Override
     public double calculateExpense(){
         return salary + (salary * taxRate);
     }
