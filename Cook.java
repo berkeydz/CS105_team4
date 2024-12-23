@@ -1,14 +1,13 @@
 public class Cook extends Employee{
     private double salary;
-    private double taxRate;
+    private double taxRate = 0.18;
     //initialize tax rate here as 18.
 
-    public Cook(int id, String name,double salary,double taxRate){
+    public Cook(String name,double salary){
         // The class diagram says that this function has parameters(int,String,double) so it should not take tax rate as a parameter it should have
         //three parameters and the tax rate should be initialized at the beginning.
-        super(id,name);
+        super(name);
         this.salary =salary;
-        this.taxRate = taxRate;
     }
     public double getSalary(){
         return salary;
