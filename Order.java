@@ -3,7 +3,7 @@ public class Order{
 
   ArrayList<Product>Orderlist=new ArrayList<>();
   
-  public void Addproduct(Product product){
+  public void addProduct(Product product){
     Orderlist.add(product);
   }
   public void listOrder(){
