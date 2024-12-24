@@ -151,6 +151,21 @@ public class Main {
 
     public static void createOrder(Scanner scanner, Restaurant restaurant) {
 
+        boolean hasCook = false;
+        for(Employee employee : restaurant.employees){
+            if (employee instanceof Cook) {
+
+                hasCook = true;
+                break;
+            }
+        }
+
+        if (!hasCook) {
+
+            System.out.println("Cannot take orders without a cook.");
+            return;
+        }
+        
         Waiter waiter = restaurant.assignWaiter();
         if ( waiter == null) {
             System.out.println("No available waiters at the moment.");
@@ -218,43 +233,43 @@ public class Main {
                         case 1:
                             MainDish pizza = new MainDish("Pizza", 10.0,20.0,5.0);
                             order.addProduct(pizza);
-                            System.out.println("Pizza: "+pizza.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 2:
                             MainDish burger = new MainDish("Burger", 10.0,20.0,5.0);
                             order.addProduct(burger);
-                            System.out.println("Burger: "+burger.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 3:
                             Beverage coke = new Beverage("Coke",10.0,20.0);
                             order.addProduct(coke);
-                            System.out.println("Coke: "+coke.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 4:
                             Beverage lemonade = new Beverage("Lemonade",10.0,20.0);
                             order.addProduct(lemonade);
-                            System.out.println("Lemonade: "+lemonade.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 5:
                             Dessert tiramisu = new Dessert("Tiramisu", 10.0,20.0,5.0);
                             order.addProduct(tiramisu);
-                            System.out.println("Tiramisu: "+tiramisu.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 6:
                             Dessert cake = new Dessert("Cake", 10.0,20.0,5.0);
                             order.addProduct(cake);
-                            System.out.println("Cake: "+cake.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 7:
                             Dessert iceCream = new Dessert("Ice Cream", 10.0,20.0,5.0);
                             order.addProduct(iceCream);
-                            System.out.println("Ice Cream: "+iceCream.getSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 8:
@@ -263,7 +278,7 @@ public class Main {
                             hungerGamesProducts.add(new Beverage("Coke", 10.0,20.0));
                             MenuProduct hungerGamesMenu = new MenuProduct("Hunger Games Menu", hungerGamesProducts);
                             order.addProduct(hungerGamesMenu);
-                            System.out.println("Hunger Games Menu: "+hungerGamesMenu.calculateSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         case 9:
@@ -272,7 +287,7 @@ public class Main {
                             kidsMenuProducts.add(new Dessert("Cake", 10.0,20.0,5.0));
                             MenuProduct kidsMenu = new MenuProduct("Kids Menu", kidsMenuProducts);
                             order.addProduct(kidsMenu);
-                            System.out.println("Kids Menu: "+kidsMenu.calculateSellingPrice());
+                            order.printOrderedProducts();
                             break;
 
                         default:
@@ -300,6 +315,7 @@ public class Main {
         waiter.createOrder(order);
         System.out.println("Order assigned to " + waiter.getName() + ".");
         System.out.println("Total order price: " + order.calculateTotalPrice());
+
 
 
 

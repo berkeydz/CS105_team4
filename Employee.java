@@ -1,15 +1,16 @@
 public abstract class Employee implements Expense  {
-    private static int id = 0;
+    private static int counter = 0;
+    private int id;
     private String name;
 
     public Employee(String name){
 
         this.name = name ;
-        Employee.id++;
+        this.id = ++counter;
         
         
     }
-    public static int getId(){
+    public int getId(){
         return id;
     }
     public String getName(){
@@ -17,18 +18,13 @@ public abstract class Employee implements Expense  {
     }
 
     public String toString(){
-        return "name: " + this.name + "id: " + Employee.id;
+        return "name: " + this.name + "id: " + this.id;
     }
 
     public double calculateExpense(){
 
-        return 0;
+       return 0;
     }
 
-    
- 
-        
-    
-    
 }
  
