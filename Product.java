@@ -1,4 +1,4 @@
-public class Product {
+public class Product implements Expense{
 
     private String name;
     private double purchasePrice;
@@ -55,5 +55,10 @@ public class Product {
         
         return "name: " + this.name + " Purchase Price: " + this.purchasePrice + " Selling Price: " + this.sellingPrice 
         + " Utility Cost " + this.utilityCost;
+    }
+
+    public double calculateExpense(){
+
+        return -999;
     }
 }
