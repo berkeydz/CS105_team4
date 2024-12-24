@@ -165,7 +165,7 @@ public class Main {
             System.out.println("Cannot take orders without a cook.");
             return;
         }
-        
+
         Waiter waiter = restaurant.assignWaiter();
         if ( waiter == null) {
             System.out.println("No available waiters at the moment.");
@@ -231,51 +231,51 @@ public class Main {
                     switch(productSelection) {
 
                         case 1:
-                            MainDish pizza = new MainDish("Pizza", 10.0,20.0,5.0);
+                            MainDish pizza = new MainDish("Pizza", 7,13,1.0);
                             order.addProduct(pizza);
                             order.printOrderedProducts();
                             break;
 
                         case 2:
-                            MainDish burger = new MainDish("Burger", 10.0,20.0,5.0);
+                            MainDish burger = new MainDish("Burger", 10.0,15.0,1.5);
                             order.addProduct(burger);
                             order.printOrderedProducts();
                             break;
 
                         case 3:
-                            Beverage coke = new Beverage("Coke",10.0,20.0);
+                            Beverage coke = new Beverage("Coke",1.0,4.0);
                             order.addProduct(coke);
                             order.printOrderedProducts();
                             break;
 
                         case 4:
-                            Beverage lemonade = new Beverage("Lemonade",10.0,20.0);
+                            Beverage lemonade = new Beverage("Lemonade",2.0,5.0);
                             order.addProduct(lemonade);
                             order.printOrderedProducts();
                             break;
 
                         case 5:
-                            Dessert tiramisu = new Dessert("Tiramisu", 10.0,20.0,5.0);
+                            Dessert tiramisu = new Dessert("Tiramisu", 8.0,16.0,5.0);
                             order.addProduct(tiramisu);
                             order.printOrderedProducts();
                             break;
 
                         case 6:
-                            Dessert cake = new Dessert("Cake", 10.0,20.0,5.0);
+                            Dessert cake = new Dessert("Cake", 7.5,15,3.0);
                             order.addProduct(cake);
                             order.printOrderedProducts();
                             break;
 
                         case 7:
-                            Dessert iceCream = new Dessert("Ice Cream", 10.0,20.0,5.0);
+                            Dessert iceCream = new Dessert("Ice Cream", 3.0,7.5,1.0);
                             order.addProduct(iceCream);
                             order.printOrderedProducts();
                             break;
 
                         case 8:
                             List<Product> hungerGamesProducts = new ArrayList<>();
-                            hungerGamesProducts.add(new MainDish("Pizza", 10.0,20.0,5.0));
-                            hungerGamesProducts.add(new Beverage("Coke", 10.0,20.0));
+                            hungerGamesProducts.add(new MainDish("Pizza", 7.0,13.0,1.0));
+                            hungerGamesProducts.add(new Beverage("Coke", 1.0,4.0));
                             MenuProduct hungerGamesMenu = new MenuProduct("Hunger Games Menu", hungerGamesProducts);
                             order.addProduct(hungerGamesMenu);
                             order.printOrderedProducts();
@@ -283,8 +283,8 @@ public class Main {
 
                         case 9:
                             List <Product> kidsMenuProducts = new ArrayList<>();
-                            kidsMenuProducts.add(new MainDish("Pizza", 10.0,20.0,5.0));
-                            kidsMenuProducts.add(new Dessert("Cake", 10.0,20.0,5.0));
+                            kidsMenuProducts.add(new MainDish("Pizza", 7.0,13.0,1.0));
+                            kidsMenuProducts.add(new Dessert("Cake", 7.5,15.0,3.0));
                             MenuProduct kidsMenu = new MenuProduct("Kids Menu", kidsMenuProducts);
                             order.addProduct(kidsMenu);
                             order.printOrderedProducts();
