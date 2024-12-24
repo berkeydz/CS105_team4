@@ -73,8 +73,24 @@ public class Main {
                     break;
 
                 case 3:
+                    double totalExpense = restaurant.calculateExpenses();
 
-                    // Will be completed later.
+                    double employeeExpense = 0;
+                    for(Employee employee : restaurant.employees){
+
+                        if(employee instanceof Cook){
+                            employeeExpense += ((Cook)employee).calculateExpense();
+                        }
+                        else if(employee instanceof Waiter){
+                            employeeExpense += ((Waiter)employee).calculateExpense();
+                        }
+                    }
+                    double orderExpense = totalExpense - employeeExpense;
+
+                    System.out.println("Employee Expenses: " + employeeExpense);
+                    System.out.println("Order Expenses: " + orderExpense);
+                    System.out.println("Total Expenses: " + totalExpense);
+                    
                     break;
 
                 case 4:
@@ -201,43 +217,43 @@ public class Main {
 
                         case 1:
                             MainDish pizza = new MainDish("Pizza", 10.0,20.0,5.0);
-                            order.Addproduct(pizza);
+                            order.addProduct(pizza);
                             System.out.println("Pizza: "+pizza.getSellingPrice());
                             break;
 
                         case 2:
                             MainDish burger = new MainDish("Burger", 10.0,20.0,5.0);
-                            order.Addproduct(burger);
+                            order.addProduct(burger);
                             System.out.println("Burger: "+burger.getSellingPrice());
                             break;
 
                         case 3:
                             Beverage coke = new Beverage("Coke",10.0,20.0);
-                            order.Addproduct(coke);
+                            order.addProduct(coke);
                             System.out.println("Coke: "+coke.getSellingPrice());
                             break;
 
                         case 4:
                             Beverage lemonade = new Beverage("Lemonade",10.0,20.0);
-                            order.Addproduct(lemonade);
+                            order.addProduct(lemonade);
                             System.out.println("Lemonade: "+lemonade.getSellingPrice());
                             break;
 
                         case 5:
                             Dessert tiramisu = new Dessert("Tiramisu", 10.0,20.0,5.0);
-                            order.Addproduct(tiramisu);
+                            order.addProduct(tiramisu);
                             System.out.println("Tiramisu: "+tiramisu.getSellingPrice());
                             break;
 
                         case 6:
                             Dessert cake = new Dessert("Cake", 10.0,20.0,5.0);
-                            order.Addproduct(cake);
+                            order.addProduct(cake);
                             System.out.println("Cake: "+cake.getSellingPrice());
                             break;
 
                         case 7:
                             Dessert iceCream = new Dessert("Ice Cream", 10.0,20.0,5.0);
-                            order.Addproduct(iceCream);
+                            order.addProduct(iceCream);
                             System.out.println("Ice Cream: "+iceCream.getSellingPrice());
                             break;
 
@@ -246,7 +262,7 @@ public class Main {
                             hungerGamesProducts.add(new MainDish("Pizza", 10.0,20.0,5.0));
                             hungerGamesProducts.add(new Beverage("Coke", 10.0,20.0));
                             MenuProduct hungerGamesMenu = new MenuProduct("Hunger Games Menu", hungerGamesProducts);
-                            order.Addproduct(hungerGamesMenu);
+                            order.addProduct(hungerGamesMenu);
                             System.out.println("Hunger Games Menu: "+hungerGamesMenu.calculateSellingPrice());
                             break;
 
@@ -255,7 +271,7 @@ public class Main {
                             kidsMenuProducts.add(new MainDish("Pizza", 10.0,20.0,5.0));
                             kidsMenuProducts.add(new Dessert("Cake", 10.0,20.0,5.0));
                             MenuProduct kidsMenu = new MenuProduct("Kids Menu", kidsMenuProducts);
-                            order.Addproduct(kidsMenu);
+                            order.addProduct(kidsMenu);
                             System.out.println("Kids Menu: "+kidsMenu.calculateSellingPrice());
                             break;
 
