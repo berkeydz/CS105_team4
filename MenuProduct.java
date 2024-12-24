@@ -19,17 +19,17 @@ public class MenuProduct extends Product {
             
             if( product instanceof MainDish){
 
-                totalPrice += 9/10 * product.getSellingPrice();
+                totalPrice += 9/10 * ((MainDish)product).getSellingPrice();
             }
 
             else if( product instanceof Dessert){
 
-                totalPrice += 8/10 * product.getSellingPrice();
+                totalPrice += 8/10 * ((Dessert)product).getSellingPrice();
             }
 
             else if( product instanceof Beverage){
 
-                totalPrice += 5/10 * product.getSellingPrice();
+                totalPrice += 5/10 * ((Beverage)product).getSellingPrice();
             }
 
             else{

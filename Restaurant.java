@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Restaurant {
 
-    private ArrayList<Employee> employees;
+    protected ArrayList<Employee> employees;
     private ArrayList<Product> products;
 
     public Restaurant() {
