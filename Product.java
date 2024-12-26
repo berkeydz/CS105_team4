@@ -59,6 +59,6 @@ public class Product implements Expense{
 
     public double calculateExpense(){
 
-        return -999;
+        return 0;
     }
 }
