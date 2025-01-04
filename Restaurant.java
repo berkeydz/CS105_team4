@@ -112,7 +112,13 @@ public class Restaurant {
                     
                     for(Product product : orderedProducts){
 
+                        if(product instanceof MenuProduct){
+
+                            totalExpenses += product.calculateExpense();
+                        }
+                        else{
                         totalExpenses += product.getPurchasePrice() + product.getUtilityCost();
+                        }
                     }
 
                 }
